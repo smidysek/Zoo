@@ -7,10 +7,6 @@ import java.util.List;
 public class Zvire {
 	LocalDate datumNarozeni;
 	List<Integer> hodinyKrmeni=new ArrayList<Integer>();  
-	public List<Integer> getHodinyKrmeni() {
-		return hodinyKrmeni;
-	}
-
 	int pocetKrmeniZaDen;
 	String jmeno;
 	boolean zijuVCesku;
@@ -22,9 +18,13 @@ public class Zvire {
 	}
 	
 	public void vypisInformace(){
-		
+		System.out.println("Datum narození zvíøete je " +datumNarozeni+ ", hodiny krmení jsou " +hodinyKrmeni+ ", jméno je " +jmeno+ " a žije v Èesku? " +zijuVCesku);
 	}
 
+	public List<Integer> getHodinyKrmeni() {
+		return hodinyKrmeni;
+	}
+	
 	public LocalDate getDatumNarozeni() {
 		return datumNarozeni;
 	}
