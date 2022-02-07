@@ -11,14 +11,18 @@ public class Zvire {
 	String jmeno;
 	boolean zijuVCesku;
 	
-	public Zvire(LocalDate datumNarozeni, String Jmeno, boolean zijuVCesku){
+	public Zvire(LocalDate datumNarozeni, String jmeno, boolean zijuVCesku){
 		this.datumNarozeni = datumNarozeni;
 		this.jmeno = jmeno;
 		this.zijuVCesku = zijuVCesku;
 	}
 	
 	public void vypisInformace(){
-		System.out.println("Datum narození zvíøete je " +datumNarozeni+ ", hodiny krmení jsou " +hodinyKrmeni+ ", jméno je " +jmeno+ " a žije v Èesku? " +zijuVCesku);
+		System.out.println("Datum narození zvíøete je " +datumNarozeni+ ". ");
+		System.out.println("Hodiny krmení jsou " +hodinyKrmeni+ ".");
+		System.out.println("Poèet krmení za den je " +pocetKrmeniZaDen+ ".");
+		System.out.println("Jméno je " +jmeno+ ".");
+		System.out.println("Žije v Èesku? " +zijuVCesku+".");
 	}
 
 	public List<Integer> getHodinyKrmeni() {

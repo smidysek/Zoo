@@ -1,29 +1,36 @@
 package pack;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ZooAplikace {
-
+	
 	public static void main(String[] args) {
-		Pes pes = new Pes(2000, "Max", false, 36);
-		pes.vypisInformace();
+		LocalDate datumNarozeni = LocalDate.of(2000, 4, 2);
+		List<Integer> hodinyKrmeni=new ArrayList<Integer>();
+		hodinyKrmeni.add(16);
+		hodinyKrmeni.add(7);
+		
+		Pes pes = new Pes(datumNarozeni, "Max", false, 36);
 		pes.setPocetKrmeniZaDen(2);
-		pes.setHodinyKrmeni(9,17);
+		pes.setHodinyKrmeni(hodinyKrmeni);
+		pes.vypisInformace();
 		
-		Medved medved = new Medved(2000, "Brumbál", false, 36);
-		medved.vypisInformace();
+		Medved medved = new Medved(datumNarozeni, "Brumbál", false, 36);
+		medved.setHodinyKrmeni(hodinyKrmeni);
 		medved.setPocetKrmeniZaDen(3);
-		medved.setHodinyKrmeni(9,17);
+		medved.vypisInformace();
 		
-		Had had = new Had(2000, "Snake", false, 36);
-		had.vypisInformace();
+		Had had = new Had(datumNarozeni, "Snake", false, 30);
 		had.setPocetKrmeniZaDen(1);
-		had.setHodinyKrmeni(9);
+		had.setHodinyKrmeni(hodinyKrmeni);
+		had.vypisInformace();
 		
-		Krokodyl krokodyl = new Krokodyl(2000, "George", false, 36);
+		Krokodyl krokodyl = new Krokodyl(datumNarozeni, "George", false, 30);
 		krokodyl.vypisInformace();
 		
-		Zelva zelva = new Zelva(2000, "Rafael", false, 36);
+		Zelva zelva = new Zelva(datumNarozeni, "Rafael", false, 33);
 		zelva.vypisInformace();
 	}
 
